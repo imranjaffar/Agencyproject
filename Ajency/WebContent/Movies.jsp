@@ -55,6 +55,23 @@ document.getElementById("detail").style.display = "none";
 }
 </script>
 <style>
+
+
+
+html,body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+.image {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+}
+
+
+
 .title {
 	font-family: fantasy;
 	font-size: 40px;
@@ -126,25 +143,11 @@ li a {
 	text-decoration: none;
 }
 
-li
- 
-a
-:hover
-:not
- 
-(
-.active
- 
-)
+li a:hover:not(.active)
 {
-background-color
-:
- 
-#111
-;
-
-
+background-color:#111;
 }
+
 .active {
 	background-color: #4CAF50;
 }
@@ -176,8 +179,8 @@ background-color
 	position: absolute;
 	color: black;
 	bottom: 0;
-	background: rgb(0, 0, 0); /* Fallback color */
-	background: rgba(0, 0, 0, 0); /* Black background with 0.5 opacity */
+	background: rgb(0, 0, 0); 
+	background: rgba(0, 0, 0, 0); 
 	color: #f1f1f1;
 	width: 100%;
 	padding: 20px;
@@ -186,35 +189,78 @@ background-color
 p {
 	color: black;
 }
+
+#footer {
+    position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+     width: 100%;
+  height: 100px;
+
+ 
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+   
+}
+
+
+
+
+body {
+    margin-bottom:50px;
+}
+
+
+body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:red;
+   -webkit-text-fill-color: white;
+    font-size: larger;
+
+}
 </style>
 </head>
 
 
 <body onload="showmovies()">
-	<%response.setHeader("Cache-Control", "no-cache");
-    response.setHeader("Cache-Control", "no-store");
-    response.setHeader("Pragma", "no-cache");
-    response.setDateHeader("Expires", 0);%>
+
+	<div id="container">
+
+	<div id="header" class="header">
 
 
+<span><img  src="images/logo.png" style="height: 50px; "/></span>	
+	
+		<nav 	>
 
-	<div class="header">
-		<nav>
-		<ul>
-
+		<center><ul>
 			<li><a href="Movies.jsp">Home</a></li>
 			<li><a href="Movies.jsp">Movies</a></li>
 			<li><a href="error.jsp">Articles</a></li>
 			<li><a href='error.jsp'>Playlists</a></li>
 			<li><a href='form.jsp'>Submit form</a></li>
 			<li><a href='Contact.jsp'>Contact Us</a></li>
-
-		</ul>
+		</ul></center>
 
 		</nav>
 	</div>
 	<br></br>
 
+<div class="main">
 	<h1 style="margin-left: 406px; color: #cc6c25;">EXPLORE</h1>
 
 	<hr class="hr1">
@@ -258,7 +304,12 @@ p {
 		<div id="page">1</div>
 	</div>
 
-
-	<footer id="footer"> </footer>
+<br></br>
+<br></br>
+	<div id="footer"><center>ShortFilmWindow | All Rights Reserved.
+	<br></center></div>
+	</div>
+	
+	</div>
 </body>
 </html>

@@ -1,7 +1,6 @@
 
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page import="java.sql.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="com.bean.Movies"%>
@@ -12,15 +11,9 @@
 
 <HTML>
 <head>
-<style type="text/css">
-.image {
-	max-width: 100%;
-	max-height: 100%;
-	vertical-align: middle;
-}
-</style>
+
 </head>
-<BODY>
+<body>
 	<%  
 	int genre=0;
     String lang="";
