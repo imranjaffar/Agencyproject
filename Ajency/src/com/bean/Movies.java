@@ -1,6 +1,6 @@
 package com.bean;
 
-import oracle.sql.DATE;
+import java.sql.Date;
 
 public class Movies {
 
@@ -13,7 +13,7 @@ public class Movies {
 	private String director;
 	int views;
 	int likes;
-	DATE published_on;
+	Date published_on;
 
 	public int getId() {
 		return id;
@@ -87,12 +87,6 @@ public class Movies {
 		this.likes = likes;
 	}
 
-	public DATE getPublished_on() {
-		return published_on;
-	}
 
-	public void setPublished_on(DATE published_on) {
-		this.published_on = published_on;
-	}
 
 }
