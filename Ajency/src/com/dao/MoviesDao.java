@@ -180,7 +180,7 @@ public class MoviesDao {
 				System.out.println("sql query--------" + ps);
 			} else if (genre != 0) {
 				ps = con.prepareStatement(
-						"SELECT count(*) FROM movies WHERE   id	IN (SELECT m.movies_id FROM genre g, movies_genre m WHERE  g.id = m.genre_id)");
+						"SELECT count(*) FROM movies WHERE   id	IN (SELECT m.movies_id FROM genre g, movies_genre m WHERE g.id = " + genre+"  AND  g.id = m.genre_id)");
 			} else {
 				ps = con.prepareStatement("SELECT count(*) FROM movies ");
 			}

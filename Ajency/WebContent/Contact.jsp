@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -5,13 +6,16 @@
 <html>
 <head>
 <style>
-
-#content:hover {
-	opacity: 0;
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
 
-#detail:hover {
-	opacity: 1;
+.image {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
 }
 
 ul {
@@ -24,6 +28,11 @@ ul {
 
 li {
 	float: left;
+	border-right: 1px solid #bbb;
+}
+
+li:last-child {
+	border-right: none;
 }
 
 li a {
@@ -32,8 +41,10 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	padding-left: 45px;
 }
 
+}
 .active {
 	background-color: #4CAF50;
 }
@@ -44,52 +55,116 @@ li a {
 	margin: 0 auto;
 }
 
-p {
+.container .content {
+	position: absolute;
 	color: black;
+	bottom: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 20px;
+}
+
+#container {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin-bottom: 50px;
+	padding: 10px;
+	padding-bottom: 60px;
+}
+
+p {
+	font-family: cursive;
+	font-size: 21px;
+}
+
+.footer {
+	height: 24px;
+	width: 100%;
+	background-image: none;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-position: 0% 0%;
+	position: fixed;
+	bottom: 0pt;
+	left: 0pt;
+	background-color: red;
+	padding: 13px;
+}
+
+.footer_contents {
+	height: 24px;
+	width: 1000px;
+	margin: auto;
+}
+
+.mov_tittle {
+	font-size: 42px;
+	color: #d7ddfa;
 }
 </style>
 </head>
+<body>
+
+	<div id="container">
+
+		<div id="header" class="header">
+
+			<div id="header_content">
 
 
-<body onload="showmovies()">
+
+				<nav>
 
 
-	<div class="header">
-		<nav>
-		<ul>
+				<ul>
+					<span><span class="mov_tittle">S</span><img
+						src="images/logo.png" style="height: 50px;" /><span
+						class="mov_tittle">ORTFILMS</span></span>
+					<center>
+						<li style="margin-left: 393px;"><a href="Movies.jsp">Home</a></li>
+						<li><a href="Movies.jsp">Movies</a></li>
+						<li><a href="error.jsp">Articles</a></li>
+						<li><a href='error.jsp'>Playlists</a></li>
+						<li><a href='form.jsp'>Submit form</a></li>
+						<li><a href='Contact.jsp'>Contact Us</a></li>
+					</center>
+				</ul>
 
-			
-			<li><a href="Movies.jsp">Home</a></li>
-			<li><a href="Movies.jsp">Movies</a></li>
-			<li><a href="error.jsp">Articles</a></li>
-			<li><a href='error.jsp'>Playlists</a></li>
-			<li><a href='form.jsp'>Submit form</a></li>
-			<li><a href='Contact.jsp'>Contact Us</a></li>
+				</nav>
+				</center>
+			</div>
+		</div>
+		<br></br>
 
-		</ul>
+		<h2>CONTACT US</h2>
+		<hr>
 
-		</nav>
-	</div>
-	<br></br>
+		<p>You can visit us at : 302, Hill View 2, Above DCB Bank, Opp.
+			Mehboob Studio Hill Road Bandra West Mumbai – 400050 You may send
+			your Film with a DVD to above address. For any issues – contact us
+			at </p>
+
+		<br></br> <br></br>
 
 
-<h2>CONTACT US</h2>
-<hr>
+		<div class="footer">
 
-<p>
-You can visit us at :
-302, Hill View 2,
-Above DCB Bank,
-Opp. Mehboob Studio
-Hill Road
-Bandra West
-Mumbai – 400050
+			<div class="footer_contents">
+				<center style="color: white;">
+					ShortFilmWindow | All Rights Reserved. <br>
+				</center>
+			</div>
 
- 
-
-You may send your Film with a DVD to above address.
-
-For any issues – contact us at – </p>
-	<footer id="footer"> </footer>
+		</div>
 </body>
 </html>
+
+
+
+
+
