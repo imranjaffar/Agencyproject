@@ -16,7 +16,7 @@ public class MoviesDao {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ajency", "root", "");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ajency2", "root", "");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -26,9 +26,10 @@ public class MoviesDao {
 
 	public ArrayList<Movies> fetchData(int genre, String lang, String sort, int start, int total) {
 		ArrayList<Movies> list = new ArrayList<Movies>();
+		Connection con=null;
 		try {
 
-			Connection con = getConnection();
+		 con = getConnection();
 			PreparedStatement ps = null;
 			ResultSet rs = null;
 			if (genre != 0) {
@@ -129,9 +130,13 @@ public class MoviesDao {
 
 			}
 
+			con.close();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		
+		
+		
 		return list;
 	}
 
@@ -153,6 +158,7 @@ public class MoviesDao {
 				list.add(rs.getString(1));
 			}
 
+			con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -191,6 +197,7 @@ public class MoviesDao {
 				count = rs.getInt(1);
 			}
 
+			con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
