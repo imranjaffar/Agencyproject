@@ -1,0 +1,14 @@
+to fix  java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+
+steps:
+
+1 window->show view->servers then double click on server
+
+2 then it will open a new window then goto open Launch configuration then
+
+3.go to class path --> select user entries/bootstrap entries and agin add mysql-connector.jar click on ok.
+
+
+OR
+
+use apache tomcat v9.0
